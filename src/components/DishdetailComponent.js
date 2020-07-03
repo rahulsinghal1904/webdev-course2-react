@@ -23,9 +23,9 @@ class DishDetail extends Component{
         }
     }
 
-    renderComments(comments){
-        if(comments!=null){
-            return comments.map((comment)=>{
+    renderComments(dish){
+        if(dish!=null){
+            return dish.comments.map((comment)=>{
                 return(
                     
                     <div key={comment.id} >
@@ -55,7 +55,7 @@ class DishDetail extends Component{
                 </div>
                 <div className="col-12 col-md-5 m-1">
                     <h4>Comments</h4>
-                        {this.renderComments(this.props.dish.comments)}
+                        {this.renderComments(this.props.dish)}
                 </div>
             </div>
         </div>
